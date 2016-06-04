@@ -1,5 +1,5 @@
 
-./app/Main.hs,427
+./app/Main.hs,975
 module Main Main2,3
 test test12,13
 charAParser:charAParser14,15
@@ -14,6 +14,21 @@ wordsParser wordsParser27,28
 wordsParser wordsParser28,29
 csvParser csvParser33,34
 csvParser csvParser34,35
+dogCatParser dogCatParser40,41
+dogCatParser dogCatParser41,42
+camelCatTryParser:camelCatTryParser45,46
+camelCatTryParser camelCatTryParser46,47
+type TNumber TNumber50,51
+data TOperator TOperator52,53
+data TOperator = TAddTAdd52,53
+               | TSubtractTSubtract53,54
+data TExpression TExpression56,57
+data TExpression = TNode TNode56,57
+                 | TTerminal TTerminal57,58
+numberParser numberParser60,61
+numberParser numberParser61,62
+operatorParser operatorParser63,64
+operatorParser operatorParser64,65
 
 ./app/ParsecExamples.hs,71
 module ParsecExamples ParsecExamples1,2
