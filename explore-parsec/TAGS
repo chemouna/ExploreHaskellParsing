@@ -1,5 +1,5 @@
 
-./app/Main.hs,975
+./app/Main.hs,1213
 module Main Main2,3
 test test12,13
 charAParser:charAParser14,15
@@ -29,6 +29,12 @@ numberParser numberParser60,61
 numberParser numberParser61,62
 operatorParser operatorParser63,64
 operatorParser operatorParser64,65
+expressionParser expressionParser68,69
+expressionParser expressionParser69,70
+binaryExpressionParser binaryExpressionParser72,73
+binaryExpressionParser binaryExpressionParser73,74
+evaluate evaluate75,76
+evaluate evaluate76,77
 
 ./app/ParsecExamples.hs,71
 module ParsecExamples ParsecExamples1,2

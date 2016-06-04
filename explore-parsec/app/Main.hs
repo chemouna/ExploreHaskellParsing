@@ -66,10 +66,18 @@ operatorParser = chooseOp <$> (oneOf "+-")
   where chooseOp '+' = TAdd
         chooseOp '-' = TSubtract
 
+expressionParser :: Parsec String st TExpression
+expressionParser = (between (char '(') (char ')')) binaryExpressionParser <|>
+                   (TTerminal <$> numberParser)
 
--- try also attoparsec
+binaryExpressionParser :: Parsec String st TExpression
+binaryExpressionParser = TNode <$> expressionParser <*> operatorParser <*> expressionParser
 
--- decompose each value in the type to understand whats wrong
+evaluate :: TExpression -> TNumber
+evaluate (TNode exp1 TAdd exp2)      = (evaluate exp1) + (evaluate exp2)
+evaluate (TNode exp1 TSubtract exp2) = (evaluate exp1) - (evaluate exp2)
+evaluate (TTerminal v)               = v
+
 
 -- main :: IO ()
 -- main = someFunc
