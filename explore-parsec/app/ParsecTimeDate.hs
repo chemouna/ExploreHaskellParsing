@@ -6,6 +6,7 @@ import Data.Data
 import Data.Typeable
 import Text.Parsec
 import Text.Parsec.String
+import Data.Hourglass
 
 -- parsec parser for dates 
 
@@ -34,4 +35,10 @@ today = do
   string "today" <|> string "now"
   return $ Days 0
 
+data Config = Config {
+                      now :: DateTime
+                     ,startOfWeekDay :: WeekDay 
+                     }
+
+parseDateTime :: Config -> String -> Either ParseError DateTime
 

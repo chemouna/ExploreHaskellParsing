@@ -80,25 +80,30 @@ factor factor101,102
 number number109,110
 number number110,111
 
-./app/ParsecTimeDate.hs,644
+./app/ParsecTimeDate.hs,836
 module ParsecTimeDate ParsecTimeDate2,3
-test test11,12
-data DataIntervalType DataIntervalType13,14
-data DataIntervalType = Day Day13,14
-data DataIntervalType = Day | Week Week13,14
-data DataIntervalType = Day | Week | Month Month13,14
-data DataIntervalType = Day | Week | Month | YearYear13,14
-data DateInterval DateInterval16,17
-data DateInterval = Days Days16,17
-                  | Weeks Weeks17,18
-                  | Months Months18,19
-                  | Years Years19,20
-yesterday yesterday21,22
+test test12,13
+data DataIntervalType DataIntervalType14,15
+data DataIntervalType = Day Day14,15
+data DataIntervalType = Day | Week Week14,15
+data DataIntervalType = Day | Week | Month Month14,15
+data DataIntervalType = Day | Week | Month | YearYear14,15
+data DateInterval DateInterval17,18
+data DateInterval = Days Days17,18
+                  | Weeks Weeks18,19
+                  | Months Months19,20
+                  | Years Years20,21
 yesterday yesterday22,23
-tomorrow tomorrow26,27
+yesterday yesterday23,24
 tomorrow tomorrow27,28
-today today31,32
+tomorrow tomorrow28,29
 today today32,33
+today today33,34
+data Config Config37,38
+data Config = Config Config37,38
+                      now now38,39
+                     ,startOfWeekDay startOfWeekDay39,40
+parseDateTime parseDateTime42,43
 
 ./Setup.hs,15
 main main1,2

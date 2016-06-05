@@ -17,7 +17,8 @@ library
   hs-source-dirs:      src
   exposed-modules:     Lib
   build-depends:       base >= 4.7 && < 5
-                      , parsec >= 3.1.11
+                     , parsec >= 3.1.11
+                     , hourglass
   default-language:    Haskell2010
 
 executable explore-parsec-exe
@@ -34,6 +35,7 @@ test-suite explore-parsec-test
   main-is:             Spec.hs
   build-depends:       base
                      , parsec >= 3.1.11
+                     , hourglass
                      , explore-parsec
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   default-language:    Haskell2010
