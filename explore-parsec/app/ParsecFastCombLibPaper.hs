@@ -51,3 +51,14 @@ testOr3 = do { try(string "(a")
              ; return "(a)"
              }
           <|> string "(b)"
+
+-- Adding semantics
+nesting :: Parser Int
+nesting = do { char '('
+             ; n <- nesting
+             ; char ')'
+             ; m <- nesting
+             ; return (max (n+1) m)
+            }
+          <|> return 0
+
