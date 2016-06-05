@@ -40,19 +40,25 @@ evaluate evaluate76,77
 module ParsecExamples ParsecExamples1,2
 charAParser charAParser6,7
 
-./app/ParsecFastCombLibPaper.hs,313
+./app/ParsecFastCombLibPaper.hs,457
 module ParsecFastCombLib ParsecFastCombLib2,3
-test test10,11
-simple simple12,13
-simple simple13,14
-word word15,16
-word word16,17
-openCloseParser openCloseParser18,19
-openCloseParser openCloseParser19,20
-parens parens23,24
-parens parens24,25
-testOr testOr33,34
-testOrWorks testOrWorks35,36
+test test12,13
+simple simple14,15
+simple simple15,16
+word word17,18
+word word18,19
+openCloseParser openCloseParser20,21
+openCloseParser openCloseParser21,22
+parens parens25,26
+parens parens26,27
+testOr testOr35,36
+testOr testOr36,37
+testOrWorks testOrWorks38,39
+testOrWorks testOrWorks39,40
+testOr2 testOr244,45
+testOr2 testOr245,46
+testOr3 testOr347,48
+testOr3 testOr348,49
 
 ./Setup.hs,15
 main main1,2

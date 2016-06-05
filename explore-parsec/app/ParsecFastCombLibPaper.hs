@@ -5,8 +5,10 @@ module ParsecFastCombLib where
 -- module to implement the example in the paper Parsec : A fast combinator parser by Daan Leijen
 
 import Text.Parsec
-import qualified Text.Parsec.Combinator as C
-import Text.Parsec.String (Parser)
+import Text.Parsec.Prim
+import Text.Parsec.Combinator
+import Text.Parsec.String
+import Text.Parsec.Char
 
 test p = parse p ""
 
@@ -31,9 +33,21 @@ parens = do { char '('
 
 
 -- (<|>) is predictive 
-testOr = String "(a)" <|> String "(b)"
+testOr :: Parser String 
+testOr = string "(a)" <|> string "(b)"
 
+testOrWorks :: Parser Char
 testOrWorks = do { char '('
-                 ; char "a" <|> char "b"
-                 ; char ")"
+                 ; char 'a' <|> char 'b'
+                 ; char ')'
                  }
+
+testOr2 :: Parser String
+testOr2 = try(string "(a)") <|> string "(b)"
+
+testOr3 :: Parser String 
+testOr3 = do { try(string "(a")
+             ; char ')'
+             ; return "(a)"
+             }
+          <|> string "(b)"
