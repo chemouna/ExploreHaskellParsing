@@ -40,39 +40,62 @@ evaluate evaluate76,77
 module ParsecExamples ParsecExamples1,2
 charAParser charAParser6,7
 
-./app/ParsecFastCombLibPaper.hs,795
+./app/ParsecFastCombLibPaper.hs,917
 module ParsecFastCombLib ParsecFastCombLib2,3
-test test12,13
-simple simple14,15
+test test13,14
 simple simple15,16
-word word17,18
+simple simple16,17
 word word18,19
-openCloseParser openCloseParser20,21
+word word19,20
 openCloseParser openCloseParser21,22
-parens parens25,26
+openCloseParser openCloseParser22,23
 parens parens26,27
-testOr testOr35,36
+parens parens27,28
 testOr testOr36,37
-testOrWorks testOrWorks38,39
+testOr testOr37,38
 testOrWorks testOrWorks39,40
-testOr2 testOr244,45
+testOrWorks testOrWorks40,41
 testOr2 testOr245,46
-testOr3 testOr347,48
+testOr2 testOr246,47
 testOr3 testOr348,49
-nesting nesting55,56
+testOr3 testOr349,50
 nesting nesting56,57
-word2 word265,66
+nesting nesting57,58
 word2 word266,67
-sentence sentence68,69
+word2 word267,68
 sentence sentence69,70
-separator separator74,75
+sentence sentence70,71
 separator separator75,76
-word3 word378,79
+separator separator76,77
 word3 word379,80
-sentence2 sentence281,82
+word3 word380,81
 sentence2 sentence282,83
-separator2 separator286,87
+sentence2 sentence283,84
 separator2 separator287,88
+separator2 separator288,89
+expr expr91,92
+expr expr92,93
+table table95,96
+factor factor101,102
+number number109,110
+number number110,111
+
+./app/ParsecTimeDate.hs,589
+module ParsecTimeDate ParsecTimeDate2,3
+data DataIntervalType DataIntervalType11,12
+data DataIntervalType = Day Day11,12
+data DataIntervalType = Day | Week Week11,12
+data DataIntervalType = Day | Week | Month Month11,12
+data DataIntervalType = Day | Week | Month | YearYear11,12
+data DateInterval DateInterval14,15
+data DateInterval = Days Days14,15
+                  | Weeks Weeks15,16
+                  | Months Months16,17
+                  | Years Years17,18
+yesterday yesterday19,20
+yesterday yesterday20,21
+tomorrow tomorrow24,25
+tomorrow tomorrow25,26
 
 ./Setup.hs,15
 main main1,2
