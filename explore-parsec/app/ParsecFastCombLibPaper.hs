@@ -1,3 +1,4 @@
+{-# LANGUAGE FlexibleContexts #-}
 
 module ParsecFastCombLib where
 
@@ -5,6 +6,12 @@ module ParsecFastCombLib where
 
 import Text.Parsec
 
-simple :: Parsec String st Char
+test p = parse p ""
+
+simple :: Stream s m Char => ParsecT s u m Char 
 simple = letter
+
+word :: Stream s m Char => ParsecT s u m String
+word = many letter
+
 

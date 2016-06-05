@@ -40,10 +40,13 @@ evaluate evaluate76,77
 module ParsecExamples ParsecExamples1,2
 charAParser charAParser6,7
 
-./app/ParsecFastCombLibPaper.hs,86
-module ParsecFastCombLib ParsecFastCombLib1,2
-simple simple7,8
-simple simple8,9
+./app/ParsecFastCombLibPaper.hs,139
+module ParsecFastCombLib ParsecFastCombLib2,3
+test test8,9
+simple simple10,11
+simple simple11,12
+word word13,14
+word word14,15
 
 ./Setup.hs,15
 main main1,2
