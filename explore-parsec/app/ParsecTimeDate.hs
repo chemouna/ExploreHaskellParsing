@@ -35,11 +35,21 @@ today = do
   string "today" <|> string "now"
   return $ Days 0
 
+pRelTime ::Stream s m Char => Config -> ParsecT s st m DateTime
+pRelTime Config { now = now' } = do
+  offs <- try futureTime
+    <|> try passsTime
+    <|> try thisminute
+    <|> try thishour
+    <|> try atnight
+    <|> try morning
+  return $ now `addInterval` offs
+
+
 data Config = Config {
                       now :: DateTime
                      ,startOfWeekDay :: WeekDay 
                      }
-
 
 parseDateTime :: Config -> String -> Either ParseError DateTime
 parseDateTime c s = runParser (pDateTime c) () "" s
