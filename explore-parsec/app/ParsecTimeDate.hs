@@ -40,5 +40,7 @@ data Config = Config {
                      ,startOfWeekDay :: WeekDay 
                      }
 
+
 parseDateTime :: Config -> String -> Either ParseError DateTime
+parseDateTime c s = runParser (pDateTime c) () "" s
 

@@ -80,7 +80,7 @@ factor factor101,102
 number number109,110
 number number110,111
 
-./app/ParsecTimeDate.hs,836
+./app/ParsecTimeDate.hs,871
 module ParsecTimeDate ParsecTimeDate2,3
 test test12,13
 data DataIntervalType DataIntervalType14,15
@@ -103,7 +103,8 @@ data Config Config37,38
 data Config = Config Config37,38
                       now now38,39
                      ,startOfWeekDay startOfWeekDay39,40
-parseDateTime parseDateTime42,43
+parseDateTime parseDateTime43,44
+parseDateTime parseDateTime44,45
 
 ./Setup.hs,15
 main main1,2
