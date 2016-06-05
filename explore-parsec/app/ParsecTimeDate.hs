@@ -45,6 +45,21 @@ pRelTime Config { now = now' } = do
     <|> try morning
   return $ now `addInterval` offs
 
+tryToReadInt :: (Stream s m Char, Num a) => String -> ParsecT s st m a
+tryToReadInt = str
+  if all isDigit string
+     then
+    else fail $ "Cannot read: " ++ str
+
+futureTime :: Stream s m Char => ParsecT s st m TimeInterval
+futureTime = do
+  string "in" <|> string "after"
+  char ' '
+  n <- many1 digit
+  tp <- pDateTimeIntervalType
+  case tp of
+    Minute -> (Minutes . negate) `fmap` tryToReadInt n
+    Hour -> (Hours . negate) `fmap` tryToReadInt n 
 
 data Config = Config {
                       now :: DateTime

@@ -80,7 +80,7 @@ factor factor101,102
 number number109,110
 number number110,111
 
-./app/ParsecTimeDate.hs,921
+./app/ParsecTimeDate.hs,1045
 module ParsecTimeDate ParsecTimeDate2,3
 test test12,13
 data DataIntervalType DataIntervalType14,15
@@ -101,12 +101,16 @@ today today32,33
 today today33,34
 pRelTime pRelTime37,38
 pRelTime pRelTime38,39
-data Config Config48,49
-data Config = Config Config48,49
-                      now now49,50
-                     ,startOfWeekDay startOfWeekDay50,51
-parseDateTime parseDateTime53,54
-parseDateTime parseDateTime54,55
+tryToReadInt tryToReadInt47,48
+tryToReadInt tryToReadInt48,49
+futureTime futureTime53,54
+futureTime futureTime54,55
+data Config Config63,64
+data Config = Config Config63,64
+                      now now64,65
+                     ,startOfWeekDay startOfWeekDay65,66
+parseDateTime parseDateTime68,69
+parseDateTime parseDateTime69,70
 
 ./Setup.hs,15
 main main1,2
