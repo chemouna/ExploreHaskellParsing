@@ -62,3 +62,12 @@ nesting = do { char '('
             }
           <|> return 0
 
+-- sequences and separators
+sentence :: Parser [String]
+sentence = do { words <- sepBy1 word separator
+                 ; oneOf ".?!"
+                 ; return words
+                 }
+
+separator :: Parser ()
+separator = skipMany1 (space <|> char ',')

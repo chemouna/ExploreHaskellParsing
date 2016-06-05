@@ -40,7 +40,7 @@ evaluate evaluate76,77
 module ParsecExamples ParsecExamples1,2
 charAParser charAParser6,7
 
-./app/ParsecFastCombLibPaper.hs,503
+./app/ParsecFastCombLibPaper.hs,607
 module ParsecFastCombLib ParsecFastCombLib2,3
 test test12,13
 simple simple14,15
@@ -61,6 +61,10 @@ testOr3 testOr347,48
 testOr3 testOr348,49
 nesting nesting55,56
 nesting nesting56,57
+sentence sentence65,66
+sentence sentence66,67
+separator separator71,72
+separator separator72,73
 
 ./Setup.hs,15
 main main1,2
