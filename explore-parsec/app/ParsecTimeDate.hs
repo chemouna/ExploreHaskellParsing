@@ -9,6 +9,8 @@ import Text.Parsec.String
 
 -- parsec parser for dates 
 
+test p = parse p ""
+
 data DataIntervalType = Day | Week | Month | Year
   deriving (Eq, Show, Data, Typeable)
 
@@ -26,3 +28,10 @@ tomorrow :: Parser DateInterval
 tomorrow = do
   string "tomorrow"
   return $ Days 1
+
+today :: Parser DateInterval
+today = do
+  string "today" <|> string "now"
+  return $ Days 0
+
+
